@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .dropzone {
+    @apply border-2 border-dashed p-8 rounded-lg text-center cursor-pointer;
+  }
+  .color-swatch {
+    @apply w-16 h-16 rounded-lg shadow-md;
+  }
+  .chat-bubble {
+    @apply p-3 rounded-lg max-w-[80%] mb-4;
+  }
+}
