@@ -26,13 +26,23 @@ export const App: React.FC = () => {
                 </ProtectedRoute>
               }
             />
-            <Route path="/login" element={<div>Login Page (TBD)</div>} />
-            <Routes>
-              <Route path="/" element={<ProtectedRoute><div className="grid grid-cols-1 md:grid-cols-2 gap-4"><ColorExtractor /><ChatInterface /></div></ProtectedRoute>} />
-              <Route path="/code" element={<ProtectedRoute><CodeGenerator /></ProtectedRoute>} />
-              <Route path="/chat" element={<ProtectedRoute><ChatInterface /></ProtectedRoute>} />
-              <Route path="/login" element={<LoginForm />} />
-            </Routes>
+            <Route
+              path="/code"
+              element={
+                <ProtectedRoute>
+                  <CodeGenerator />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/chat"
+              element={
+                <ProtectedRoute>
+                  <ChatInterface />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/login" element={<LoginForm />} />
           </Routes>
         </main>
         <Toaster position="top-right" />

@@ -12,16 +12,19 @@ export const LoginForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      // Note: Email/password auth would require Firebase setup, omitted here for brevity
       toast({
         title: 'Info',
         description: 'Please use Google or GitHub to sign in.',
         variant: 'info',
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
+      let message = 'An unexpected error occurred.';
+      if (error instanceof Error) {
+        message = error.message;
+      }
       toast({
         title: 'Error',
-        description: error.message,
+        description: message,
         variant: 'error',
       });
     }

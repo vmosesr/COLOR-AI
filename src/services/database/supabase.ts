@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 import type { User, Project } from '../../types/auth';
 
 const supabase = createClient(
-  process.env.REACT_APP_SUPABASE_URL!,
-  process.env.REACT_APP_SUPABASE_ANON_KEY!
+  import.meta.env.VITE_SUPABASE_URL!,
+  import.meta.env.VITE_SUPABASE_ANON_KEY!
 );
 
 export class SupabaseService {

@@ -1,9 +1,9 @@
 import React from 'react';
-import { ColorGroup } from '../../services/colors/colorExtractor';
+import type { ColorGroup as ColorGroupType } from '../../services/colors/colorExtractor';
 import { useColorStore } from '../../stores/colorStore';
 
 interface ColorGroupProps {
-  group: ColorGroup;
+  group: ColorGroupType;
 }
 
 export const ColorGroup: React.FC<ColorGroupProps> = ({ group }) => {

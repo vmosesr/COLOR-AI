@@ -1,12 +1,5 @@
 import { 
-  collection, 
-  doc, 
-  setDoc, 
-  getDoc, 
-  query,
-  orderBy,
-  getDocs,
-  serverTimestamp 
+  collection, doc, setDoc, getDoc, query, orderBy, getDocs, serverTimestamp 
 } from 'firebase/firestore';
 import { db } from '../auth/firebase';
 import type { User, Project } from '../../types/auth';
